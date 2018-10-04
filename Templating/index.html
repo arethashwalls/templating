@@ -12,6 +12,34 @@
     </head>
     
     <body class="bg-primary">
+        <div class="modal fade" id="credits" tabindex="-1" role="dialog" aria-labelledby="creditsLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Tokyo Tower and surrounding buildings</h6>
+                        <p><a href="https://commons.wikimedia.org/wiki/File:Tokyo_Tower_and_around_Skyscrapers.jpg">Wikimedia | User: Volfgang</a></p>
+                        <h6>Cityscape of Jakarta</h6>
+                        <p><a href="https://commons.wikimedia.org/wiki/File:Jakarta_cityscape;_March_2011.jpg">Wikimedia | User: Stenly Lam</a></p>
+                        <h6>Delhi main bazaar</h6>
+                        <p><a href="https://commons.wikimedia.org/wiki/File:Delhi_main_bazaar.jpg">Wikimedia | User: AxelBoldt</a></p>
+                        <h6>Binondo Church, Manila</h6>
+                        <p><a href="https://commons.wikimedia.org/wiki/File:Binondochurchjf.JPG">Wikimedia | User: Ramon FValesquez</a></p>
+                        <h6>Insadong Festival parade, Seoul</h6>
+                        <p><a href="https://commons.wikimedia.org/wiki/File:Korea-Seoul-Insadong-Festival_parade_in_2006-01.jpg">Wikimedia | User: yarra64</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="container-fluid">
             <div class="row bg-secondary">
                 <div class="col">
@@ -32,10 +60,10 @@
                         </div>
                     </div>
                     <div class="row mt-5" id="row2">
-                        <div class="col-md-4">
-                            <img src="filler.png" class="rounded">
+                        <div class="col-md-5">
+                            <img src="filler.png" class="img-fluid rounded" id="city-img">
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-7">
                             <p id="ph-facts">A placeholder for facts!</p>
                         </div>
                     </div>
@@ -56,7 +84,11 @@
                             <button class="btn btn-primary m-3" id="seoul-button">Seoul</button>
                         </div>
                     </div>
+                    
                 </div>
+            </div>
+            <div class="container-fluid bg-secondary fixed-bottom text-light">
+                <p class="m-2 float-right">Aretha S.H. Walls, October 2018 |  <a data-toggle="modal" data-target="#credits" id="image-credits">Image Credits</a></p>
             </div>
         </div>
         
