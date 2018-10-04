@@ -6,15 +6,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         
-        <title>Handlebars Example</title>
+        <title>Templating Example</title>
         <meta name="description" content="An example page to practice building templates using a few common libraries.">
     </head>
     
     <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <header>
+                        <p>Here's a header</p>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container" style="width: 70%;">
+                    <div class="row">
+                        <div class="col">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h1>A Templating Example</h1>
+                                    <p id="ph-region">Region</p>
+                                </div>
+                                <img class="m-3" style="width:100px;" src="filler.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="filler.png">
+                        </div>
+                        <div class="col-8">
+                            <p id="ph-population">Placeholder for population.</p>
+                            <p id="ph-area">Placeholder for area</p>
+                            <p id="ph-website">Placeholder for website</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <h1></h1>
         
-        <div id="placeholder"></div>
+       <!-- <div id="placeholder"></div>-->
         
         
         <!--Scripts!-->
