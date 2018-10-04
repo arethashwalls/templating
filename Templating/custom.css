@@ -2,4 +2,12 @@
     #city-icon {
         display: none;
     }
+    
+    #city-name {
+        font-size: 2rem;
+    }
+    
+    #row2 {
+        margin-top: 2rem!important;
+    }
 }
