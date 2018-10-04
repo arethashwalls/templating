@@ -1,10 +1,12 @@
-function renderHandlebarTemplate(templateId, context) {
-    var template = document.getElementById(templateId).innerHTML;
-    var compiled = Handlebars.compile(template);
-    return compiled(context);
-}
+$(document).ready(function() {
+    function renderHandlebarTemplate(templateId, context) {
+        var template = document.getElementById(templateId).innerHTML;
+        var compiled = Handlebars.compile(template);
+        return compiled(context);
+    }
 
 
+    var placeholder = $('#placeholder');
 
-
-document.getElementById('placeholder').innerHTML = renderHandlebarTemplate('template', {name: 'Aretha'});
+    placeholder.html(renderHandlebarTemplate('template', {name: 'Aretha'}));
+});
