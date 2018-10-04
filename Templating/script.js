@@ -1,5 +1,10 @@
+function renderHandlebarTemplate(templateId, context) {
+    var template = document.getElementById(templateId).innerHTML;
+    var compiled = Handlebars.compile(template);
+    return compiled(context);
+}
 
-var template = document.getElementById('template').innerHTML;
-var compiled = Handlebars.compile(template);
-var rendered = compiled({name: "Aretha"});
-document.getElementById('placeholder').innerHTML = rendered;
+
+
+
+document.getElementById('placeholder').innerHTML = renderHandlebarTemplate('template', {name: 'Aretha'});
