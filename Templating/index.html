@@ -32,6 +32,8 @@
                         <p><a href="https://commons.wikimedia.org/wiki/File:Binondochurchjf.JPG">Wikimedia | User: Ramon FValesquez</a></p>
                         <h6>Insadong Festival parade, Seoul</h6>
                         <p><a href="https://commons.wikimedia.org/wiki/File:Korea-Seoul-Insadong-Festival_parade_in_2006-01.jpg">Wikimedia | User: yarra64</a></p>
+                        <h6>Flags</h6>
+                        <p>All flags in public domain. Retrieved from Wikimedia.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -56,14 +58,14 @@
                             <p class="lead">Region, State</p>
                         </div>
                         <div class="col-3">
-                            <img class="m-3 float-right" style="width:100px;" id="city-icon" src="filler.png">
+                            <img class="m-3 float-right shadow" style="width:100px;" id="city-icon" src="filler.png">
                         </div>
                     </div>
                     <div class="row mt-5" id="row2">
                         <div class="col-md-5">
-                            <img src="filler.png" class="img-fluid rounded" id="city-img">
+                            <img src="filler.png" class="img-fluid rounded shadow" id="city-img">
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-7" id="facts">
                             <p id="ph-facts">A placeholder for facts!</p>
                         </div>
                     </div>
@@ -108,7 +110,11 @@
             <p id="ph-region" class="lead">{{region}}, {{state}}</p>
         </script>
         
-
+        <script id="facts-template" type="text/x-handlebars-template">
+            <p><strong>Population:</strong> {{pop}}</p>
+            <p><strong>Area:</strong> {{area}}</p>
+            
+        </script>
 
 
         <script src="script.js"></script>
