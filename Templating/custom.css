@@ -15,3 +15,21 @@
         margin-top: 2rem!important;
     }
 }
+
+.container-fluid, html {
+    background: #FF6666;
+}
+
+.bg-light{
+    background: #F1E8B8!important;
+}
+
+.bg-secondary, button {
+    background: #17A597!important;
+    border-color: #17A597!important;
+}
+
+.text-light {
+    
+}
+
