@@ -16,7 +16,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Credits</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -34,6 +34,8 @@
                         <p><a href="https://commons.wikimedia.org/wiki/File:Korea-Seoul-Insadong-Festival_parade_in_2006-01.jpg">Wikimedia | User: yarra64</a></p>
                         <h6>Flags</h6>
                         <p>All flags in public domain. Retrieved from Wikimedia.</p>
+                        <h6>Facts</h6>
+                        <p>All facts retrieved from Wikipedia article <a href="https://en.wikipedia.org/wiki/List_of_urban_areas_by_population">List of urban areas by population</a> and respective sub-articles, except for the fake ones. I made those up.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -46,7 +48,7 @@
             <div class="row bg-secondary">
                 <div class="col">
                     <header>
-                        <p class="text-right text-light m-2">Here's a header</p>
+                        <p class="text-right text-light m-2">The Top 5 Most Populous Urban Areas | An exercise in Bootstrap, jQuery, and Handlebars</p>
                     </header>
                 </div>
             </div>
@@ -63,10 +65,10 @@
                     </div>
                     <div class="row mt-5" id="row2">
                         <div class="col-md-5">
-                            <img src="filler.png" class="img-fluid rounded shadow" id="city-img">
+                            <img src="filler.png" class="img-fluid rounded shadow align-middle" id="city-img">
                         </div>
                         <div class="col-md-7" id="facts">
-                            <p id="ph-facts">A placeholder for facts!</p>
+                            <p id="facts-ph">A placeholder for facts!</p>
                         </div>
                     </div>
                     <div class="row mt-5">
@@ -90,7 +92,7 @@
                 </div>
             </div>
             <div class="container-fluid bg-secondary fixed-bottom text-light">
-                <p class="m-2 float-right">Aretha S.H. Walls, October 2018 |  <a data-toggle="modal" data-target="#credits" id="image-credits">Image Credits</a></p>
+                <p class="m-2 float-right">Aretha S.H. Walls, October 2018 |  <a data-toggle="modal" data-target="#credits" id="image-credits">Credits</a></p>
             </div>
         </div>
         
@@ -103,6 +105,7 @@
         <!--Popper--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <!--Bootstrap JS--><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <!--Handlebars--><script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+        <script src="helpers.js"></script>
         
         <!--Handlebar Templates-->
         <script id="title-template" type="text/x-handlebars-template">
@@ -111,9 +114,16 @@
         </script>
         
         <script id="facts-template" type="text/x-handlebars-template">
-            <p><strong>Population:</strong> {{pop}}</p>
-            <p><strong>Area:</strong> {{area}}</p>
-            
+            <p><strong>Population:</strong> {{formatNum pop}}</p>
+            <p><strong>Area:</strong> {{formatNum area}} square kilometers</p>
+            <ul>
+                {{#facts}}
+                    <li>{{fact}}</li> 
+                {{/facts}}
+                {{#if largest}}
+                    <li>{{city}} is the largest city in {{state}}.</li>
+                {{/if}}
+            </ul>
         </script>
 
 
