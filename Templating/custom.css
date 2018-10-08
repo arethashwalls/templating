@@ -22,14 +22,10 @@
 
 .bg-light{
     background: #F1E8B8!important;
+    color: #471C1C;
 }
 
 .bg-secondary, button {
     background: #17A597!important;
     border-color: #17A597!important;
 }
-
-.text-light {
-    
-}
-
